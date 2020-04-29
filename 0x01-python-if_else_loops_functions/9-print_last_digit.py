@@ -1,7 +1,8 @@
 def print_last_digit(number):
 
-    digit = str(number)[-1]
+    strdigit = str(number)[-1]
+    digit = int(strdigit)
 
-    print("{:s}".format(digit), end='')
+    print(digit, end='')
 
-    return (int(digit))
+    return (digit)

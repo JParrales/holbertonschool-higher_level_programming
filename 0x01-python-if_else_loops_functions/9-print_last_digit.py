@@ -1,8 +1,7 @@
 def print_last_digit(number):
 
-    strdigit = str(number)[-1]
-    digit = int(strdigit)
-
+    digit = abs(number) % 10
+    
     print(digit, end='')
 
     return (digit)

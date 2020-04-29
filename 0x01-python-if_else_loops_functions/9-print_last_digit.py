@@ -1,7 +1,8 @@
+#!/usr/bin/python3
+
+
 def print_last_digit(number):
 
-    digit = abs(number) % 10
-    
-    print(digit, end='')
-
-    return (digit)
+    digit = str(number)[-1]
+    print("{:s}".format(digit), end='')
+    return (int(digit))

@@ -5,7 +5,7 @@ if __name__ == "__main__":
 
     lenArg = len(sys.argv)
 
-    if lenArg > 1:
+    if lenArg > 2:
         for i in range(lenArg):
 
             if i == 0:

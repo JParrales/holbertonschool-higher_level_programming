@@ -19,13 +19,16 @@ if __name__ == "__main__":
     b = int(argv[2])
     op = argv[1]
 
-    if op == "+":
+    if op == '+':
         sol = add(a, b)
-    elif op == "-":
+    elif op == '-':
         sol = sub(a, b)
-    elif op == "*":
+    elif op == '*':
         sol = mul(a, b)
-    else:
+    elif op == '/':
         sol = div(a, b)
+    else:
+        print('Unknown operator. Available operators: +, -, * and /')
+        exit(1)
 
     print("{} {} {} = {}".format(a, op, b, sol))

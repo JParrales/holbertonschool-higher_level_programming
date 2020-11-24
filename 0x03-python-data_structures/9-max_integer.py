@@ -2,9 +2,9 @@
 
 
 def max_integer(my_list=[]):
-	if my_list == []:
-		return None
+    if my_list == []:
+        return None
 
-	max = sorted(my_list)[-1]
+    max = sorted(my_list)[-1]
 
-	return max
+    return max

@@ -3,7 +3,7 @@
 
 
 class Square:
-    
+
     """ Class Square
     Private instance attribute"""
 

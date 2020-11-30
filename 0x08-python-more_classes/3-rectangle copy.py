@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Area and Perimeter """
+""" String representation """
 
 
 class Rectangle:
@@ -12,10 +12,12 @@ class Rectangle:
 
     @property
     def width(self):
+        """ Property getter width """
         return self.__width
 
     @width.setter
     def width(self, value):
+        """ property setter width """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -24,10 +26,12 @@ class Rectangle:
 
     @property
     def height(self):
+        """ Property getter height """
         return self.__height
 
     @height.setter
     def height(self, value):
+        """ property setter height """
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
@@ -43,3 +47,11 @@ class Rectangle:
         if self.width is 0 or self.height is 0:
             return 0
         return 2 * self.width + 2 * self.height
+
+    def __str__(self):
+        """ print the rectangle """
+        if self.width is 0 or self.height is 0:
+            return ''
+
+        nl = '\n'
+        return f"{('#' * self.width + nl) * self.height}"

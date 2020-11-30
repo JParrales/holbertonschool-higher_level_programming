@@ -60,4 +60,4 @@ class Rectangle:
             return ''
 
         nl = '\n'
-        return f"{('#' * self.width + nl) * self.height}"
+        return (f"{('#' * self.width + nl) * self.height}")

@@ -48,6 +48,5 @@ class Rectangle:
         """ print the rectangle """
         if self.width is 0 or self.height is 0:
             return ''
-
         nl = '\n'
         return f"{('#' * self.width + nl) * self.height}"

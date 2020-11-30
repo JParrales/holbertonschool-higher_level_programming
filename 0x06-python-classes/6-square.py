@@ -8,13 +8,13 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """ Instantiation attribute:size  """
 
-        self.size = size
-        self.position = position
+        self.__size = size
+        self.__position = position
 
     def area(self):
         """ Public instance method: area """
 
-        return self.size ** 2
+        return self.__size ** 2
 
     @property
     def size(self):
@@ -49,7 +49,7 @@ class Square:
         if self.__size == 0:
             print()
 
-        print('\n' * self.__position[1], end='')
+        [print("") for i in range(self.__position[1])]
         for i in range(self.__size):
             print(' ' * self.__position[0], end='')
             print('#' * self.__size)

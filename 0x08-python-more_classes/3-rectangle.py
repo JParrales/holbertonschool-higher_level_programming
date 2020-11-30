@@ -43,3 +43,21 @@ class Rectangle:
         if self.width is 0 or self.height is 0:
             return 0
         return 2 * self.width + 2 * self.height
+
+    def area(self):
+        """ Public instance method: area """
+        return self.width * self.height
+
+    def perimeter(self):
+        """ Public instance method: perimeter """
+        if self.width is 0 or self.height is 0:
+            return 0
+        return 2 * self.width + 2 * self.height
+
+    def __str__(self):
+        """ print the rectangle """
+        if self.width is 0 or self.height is 0:
+            return ''
+
+        nl = '\n'
+        return f"{('#' * self.width + nl) * self.height}"

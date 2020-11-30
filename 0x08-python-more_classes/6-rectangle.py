@@ -61,4 +61,5 @@ class Rectangle:
 
     def __del__(self):
         """Delete Instance rectangle"""
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")

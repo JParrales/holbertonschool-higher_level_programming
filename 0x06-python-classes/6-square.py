@@ -14,7 +14,7 @@ class Square:
     def area(self):
         """ Public instance method: area """
 
-        return self.size ** 2
+        return self.__size ** 2
 
     @property
     def size(self):

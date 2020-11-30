@@ -3,4 +3,5 @@
 
 
 def lookup(obj):
-    pass
+    """ Return the attributes and methods """
+    return dir(obj)

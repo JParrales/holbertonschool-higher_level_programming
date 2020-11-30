@@ -53,8 +53,9 @@ class Rectangle:
             return ''
 
         return '{}{}'.format(
-            (str(self.print_symbol) * self.width +
-                '\n') * (self.height - 1), '#' * self.width
+                (str(self.print_symbol) * self.width +
+                    '\n') * (self.height - 1),
+                str(self.print_symbol) * self.width
             )
 
     def __repr__(self):

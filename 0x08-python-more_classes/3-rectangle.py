@@ -43,3 +43,11 @@ class Rectangle:
         if self.width is 0 or self.height is 0:
             return 0
         return 2 * self.width + 2 * self.height
+
+    def __str__(self):
+        """ print the rectangle """
+        if self.width is 0 or self.height is 0:
+            return ''
+
+        nl = '\n'
+        return f"{('#' * self.width + nl) * self.height}"

@@ -49,4 +49,6 @@ class Rectangle:
         if self.width is 0 or self.height is 0:
             return ''
 
-        return [f"{('#' * self.width + nl) * self.height}"]
+        return '{}{}'.format(
+            ('#' * self.width + '\n') * (self.height - 1), '#' * self.width
+                            )

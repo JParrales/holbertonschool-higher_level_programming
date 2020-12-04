@@ -8,5 +8,5 @@ def read_lines(filename="", nb_lines=0):
         for l, line in enumerate(file):
             print(line, end="")
 
-            if n_lines == l + 1:
+            if nb_lines == l + 1:
                 break

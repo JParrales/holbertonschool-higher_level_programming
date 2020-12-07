@@ -17,7 +17,7 @@ Importing
 Importing the function from the module.
 
 ::
-    text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 tet
 ======
@@ -40,7 +40,7 @@ tet
     <BLANKLINE>
 
 
-    >>> text_indentation("Hello?: Holberton?    Software. School? !  ")
+    >>> text_indentation("Hello?: Holberton?    Software. School? !")
     Hello?
     <BLANKLINE>
     :
@@ -51,8 +51,7 @@ tet
     <BLANKLINE>
     School?
     <BLANKLINE>
-    !  
-
+    !
 
     >>> text_indentation("hello:  " + ".wor?ld")
     hello:
@@ -92,10 +91,10 @@ tet
     <BLANKLINE>
     2
 
-ERRORS
-======
+    ERRORS
+    ======
 
-::
+    ::
     >>> text_indentation(443434)
     Traceback (most recent call last):
     ...

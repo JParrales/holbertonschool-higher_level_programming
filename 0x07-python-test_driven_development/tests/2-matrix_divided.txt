@@ -74,6 +74,46 @@ string values
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
+argumets
+---------
+::
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+one argumet
+-----------
+::
+    >>> matrix_divided([1,2])
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Div
+====
+
+string
+------
+::
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], "12")
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+	 
+is 0
+-----
+::
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by zero
+
+infinite float
+---------------
+::
+    >>> matrix_divided([[1, 2], [2, 1]], float('inf'))
+    [[0.0, 0.0], [0.0, 0.0]]
 
 Docstring
 ==========

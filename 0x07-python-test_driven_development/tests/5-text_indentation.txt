@@ -1,0 +1,127 @@
+========================
+Test: 5-text_indentation
+========================
+
+function: ``text_indentation(text)``.
+
+Usage
+=====
+function that prints a text with 2 new lines
+after each of these characters: ., ? and :
+
+----------------------------------------------------------
+
+Importing
+==========
+
+Importing the function from the module.
+
+::
+    text_indentation = __import__('5-text_indentation').text_indentation
+
+tet
+======
+
+::
+    >>> text_indentation("Hello?")
+    Hello?
+    <BLANKLINE>
+
+    >>> text_indentation("Hello?: Holberton?? School?  ")
+    Hello?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    Holberton?
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    School?
+    <BLANKLINE>
+
+
+    >>> text_indentation("Hello?: Holberton?    Software. School? !  ")
+    Hello?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    Holberton?
+    <BLANKLINE>
+    Software.
+    <BLANKLINE>
+    School?
+    <BLANKLINE>
+    !  
+
+
+    >>> text_indentation("hello:  " + ".wor?ld")
+    hello:
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    wor?
+    <BLANKLINE>
+    ld
+
+
+    >>> text_indentation("hello:  " + ".w.or?l:d" + str (34))
+    hello:
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    w.
+    <BLANKLINE>
+    or?
+    <BLANKLINE>
+    l:
+    <BLANKLINE>
+    d34
+
+    >>> text_indentation("hello:  " + ".wor?)?:fsa4?2")
+    hello:
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    wor?
+    <BLANKLINE>
+    )?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    fsa4?
+    <BLANKLINE>
+    2
+
+ERRORS
+======
+
+::
+    >>> text_indentation(443434)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+    Argument non string:
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+    Argument non string 2:
+    >>> text_indentation(30.443)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Docstring
+==========
+
+module:
+    >>> module = __import__("3-say_my_name").__doc__
+    >>> len(module) > 1
+    True
+
+function:
+    >>> fun = __import__("3-say_my_name").say_my_name.__doc__
+    >>> len(fun) > 1
+    True

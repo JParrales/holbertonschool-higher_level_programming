@@ -16,21 +16,21 @@ Importing
 Importing the function from the module.
 
 ::
-    >>>add_integer = _import__("0-add_integer").add_integer
+    >>> add_integer = __import__("0-add_integer").add_integer
 
 
 Positive Numbers
 =================
 
 ::
-    >>>add_integer(1, 2)
+    >>> add_integer(1, 2)
     3
 
 Negative Numbers
 =================
 
 ::
-    >>>add_integer(-2, -3)
+    >>> add_integer(-2, -3)
     -5
 
 
@@ -38,28 +38,28 @@ a=Negative , b=Positive
 ========================
 
 ::
-    >>>add_integer(-2, 7)
+    >>> add_integer(-2, 7)
     5
 
 a=Positive , b=Negative
 ======================== 
 
 ::
-    >>>add_integer(3, -8)
+    >>> add_integer(3, -8)
     -5
 
 Multiple values
 ================
 
 ::
-    >>>[add_integer(i, i + i) for i in range(5)]
+    >>> [add_integer(i, i + i) for i in range(5)]
     [0, 3, 6, 9, 12]
 
 float numbers
 ==============
 
 ::
-    >>>add_integer(15.2, 15.7)
+    >>> add_integer(15.2, 15.7)
     30
 
 integers + float
@@ -80,7 +80,7 @@ One parameter
     100
 
     >>> add_integer(502.57)
-        600
+    600
 
 ERRORS
 =======
@@ -97,21 +97,21 @@ Recive string data:
     TypeError: b must be an integer
 
 Non arguments:
-	 >>> add_integer()
-	 Traceback (most recent call last):
-     ...
-     TypeError: a must be an integer
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
 
 
 Docstring
 ==========
 
 module:
-    >>>module = __import__("0-add_integer").__doc__
+    >>> module = __import__("0-add_integer").__doc__
     >>> len(module) > 1
-	 True
+    True
 
 function:
-    >>>fun = __import__("0-add_integer").add_integer.__doc__
-    >>> len(f) > 1
-	 True
+    >>> fun = __import__("0-add_integer").add_integer.__doc__
+    >>> len(fun) > 1
+    True

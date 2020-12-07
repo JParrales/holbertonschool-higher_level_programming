@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-""" 
+"""
 Task: 0. Integers addition
 Function that adds 2 integers.
 Prototype: def add_integer(a, b=98):
 """
 
+
 def add_integer(a, b=98):
-    """ 
+    """
     Function that adds 2 integers.
     """
     if type(a) is not int and type(a) is not float:

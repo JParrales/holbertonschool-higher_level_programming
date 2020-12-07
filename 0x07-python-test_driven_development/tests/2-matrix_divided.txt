@@ -1,0 +1,131 @@
+========================
+Test: 2-matrix_divided.py 
+========================
+
+function: ``matrix_divided(matrix, div)``.
+
+Usage
+=====
+function that divides all elements of a matrix.
+
+-----------------------------------------------------------------------
+
+Importing
+==========
+
+Importing the function from the module.
+
+::
+    >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+
+Positive Numbers
+=================
+
+::
+    >>> add_integer(1, 2)
+    3
+
+Negative Numbers
+=================
+
+::
+    >>> add_integer(-2, -3)
+    -5
+
+
+a=Negative , b=Positive
+========================
+
+::
+    >>> add_integer(-2, 7)
+    5
+
+a=Positive , b=Negative
+======================== 
+
+::
+    >>> add_integer(3, -8)
+    -5
+
+Multiple values
+================
+
+::
+    >>> [add_integer(i, i + i) for i in range(5)]
+    [0, 3, 6, 9, 12]
+
+float numbers
+==============
+
+::
+    >>> add_integer(15.2, 15.7)
+    30
+
+integers + float
+=================
+
+::
+    >>> add_integer(10.0, -6)
+    4
+
+    >>> add_integer(-29, 20.5)
+    -9
+
+One parameter
+==============
+
+::
+    >>> add_integer(2)
+    100
+
+    >>> add_integer(502.57)
+    600
+
+ERRORS
+=======
+
+Recive string data:
+    >>> add_integer("Holberton", 7)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    >>> add_integer(5, "School")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+Non arguments:
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Convert float NaN to integer
+
+ ::
+    >>> add_integer(float('NaN'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+
+
+parameter float('inf')
+
+::
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+Docstring
+==========
+
+module:
+    >>> module = __import__("0-add_integer").__doc__
+    >>> len(module) > 1
+    True
+
+function:
+    >>> fun = __import__("0-add_integer").add_integer.__doc__
+    >>> len(fun) > 1
+    True

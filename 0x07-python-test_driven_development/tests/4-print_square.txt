@@ -1,0 +1,74 @@
+========================
+Test: 4-print_square
+========================
+
+function: ``print_square(size)``.
+
+Usage
+=====
+function that prints a square with the character #.
+
+----------------------------------------------------------
+
+Importing
+==========
+
+Importing the function from the module.
+
+::
+    >>> print_square = __import__('4-print_square').print_square
+
+
+square
+======
+
+Print a square of size 4:
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+Print a square of size 6:
+    >>> print_square(6)
+    ######
+    ######
+    ######
+    ######
+    ######
+    ######
+
+Type size is float:
+    >>> print_square(6.0)
+    Traceback (most recent call last):
+	...
+    TypeError: size must be an integer
+
+Size is zero:
+    >>> print_square(0)
+
+Size is less than zero:
+    >>> print_square(-23)
+    Traceback (most recent call last):
+	...
+    ValueError: size must be >= 0
+
+Non argument:
+    >>> print_square()
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
+
+Docstring
+==========
+
+module:
+    >>> module = __import__("3-say_my_name").__doc__
+    >>> len(module) > 1
+    True
+
+function:
+    >>> fun = __import__("3-say_my_name").say_my_name.__doc__
+    >>> len(fun) > 1
+    True

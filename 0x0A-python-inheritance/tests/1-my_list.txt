@@ -54,17 +54,17 @@ Arguments
 Docstring
 ==========
 
-module:
-    >>> module = __import__('1-my_list').__doc__
-	>>> len(module) > 1
+Doc module:
+    >>> d_module = __import__('1-my_list').__doc__
+	>>> len(d_module) > 1
 	True
 
-class:
-	>>> class = __import__('1-my_list').MyList.__doc__
-    >>> len(class) > 1
+Doc class:
+	>>> d_class = __import__('1-my_list').MyList.__doc__
+    >>> len(d_class) > 1
     True
  
-method:
-    >>> method= __import__('1-my_list').MyList.print_sorted.__doc__
-    >>> len(method) > 1
+Doc method:
+    >>> d_method= __import__('1-my_list').MyList.print_sorted.__doc__
+    >>> len(d_method) > 1
     True
